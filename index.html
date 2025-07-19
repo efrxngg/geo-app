@@ -36,7 +36,7 @@
                     stroke="currentColor"
                     stroke-width="2"
             >
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
             </svg>
         </a>
 
@@ -56,16 +56,118 @@
         </div>
     </div>
 </header>
-<div id="navbar-selection-date">
-    <div id="date-checks"></div>
-    <div id="date-selector"></div>
+<div class="flex">
+
+    <nav id="navbar-selection-date" class="bg-white dark:bg-gray-900 w-64 min-h-screen p-4">
+        <div class="mb-8">
+            <h2 class="text-xl font-bold text-gray-800 dark:text-white mb-4">Panel de Control</h2>
+        </div>
+        <ul class="space-y-2">
+
+            <li>
+                <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                    <summary class="flex items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200">
+                        <div class="flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                            </svg>
+                            <span class="text-sm font-medium">Niveles de Riesgo</span>
+                        </div>
+                        <span class="shrink-0 transition duration-300 group-open:-rotate-180">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                    </summary>
+                    <ul class="mt-2 space-y-1 px-4">
+                        <li>
+                            <button class="flex items-center w-full rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200">
+                                <span class="h-3 w-3 rounded-full bg-blue-500 mr-2"></span>
+                                Riesgo Bajo
+                            </button>
+                        </li>
+                        <li>
+                            <button class="flex items-center w-full rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200">
+                                <span class="h-3 w-3 rounded-full bg-orange-500 mr-2"></span>
+                                Riesgo Medio
+                            </button>
+                        </li>
+                        <li>
+                            <button class="flex items-center w-full rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200">
+                                <span class="h-3 w-3 rounded-full bg-red-500 mr-2"></span>
+                                Riesgo Alto
+                            </button>
+                        </li>
+                    </ul>
+                </details>
+            </li>
+
+
+            <li>
+                <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                    <summary class="flex items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200">
+                        <div class="flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            <span class="text-sm font-medium">Histórico</span>
+                        </div>
+                        <span class="shrink-0 transition duration-300 group-open:-rotate-180">
+                <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+            </span>
+                    </summary>
+
+                    <div class="mt-4 px-4 py-2 space-y-4">
+                        <div>
+                            <label for="fecha-desde" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">
+                                Desde
+                            </label>
+                            <div class="relative">
+                                <input
+                                        type="date"
+                                        id="fecha-desde"
+                                        name="fecha-desde"
+                                        class="w-full rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm text-gray-700 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200 dark:focus:border-blue-400"
+                                />
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="fecha-hasta" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">
+                                Hasta
+                            </label>
+                            <div class="relative">
+                                <input
+                                        type="date"
+                                        id="fecha-hasta"
+                                        name="fecha-hasta"
+                                        class="w-full rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm text-gray-700 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200 dark:focus:border-blue-400"
+                                />
+                            </div>
+                        </div>
+
+                        <button
+                                type="button"
+                                class="w-full rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:bg-blue-500 dark:hover:bg-blue-600"
+                                onclick="buscarHistorico()"
+                        >
+                            Buscar
+                        </button>
+                    </div>
+                </details>
+            </li>
+        </ul>
+    </nav>
+    <div id="map" class="flex-1"></div>
 </div>
-<div id="map"></div>
+<footer>Grupo 7</footer>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <script>
-    const map = L.map("map").setView([-2.17, -79.92], 8);
+    const map = L.map("map").setView([-1.7, -78.4], 7);
 
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         attribution: "© OpenStreetMap contributors"
@@ -80,23 +182,23 @@
 
     async function fetchAndRenderMarkers() {
         try {
-            const response = await fetch("http://127.0.0.1:8000/riesgo_hidrologico");
+            const response = await fetch("http://127.0.0.1:8081/geo/extreme-events");
             const records = await response.json();
 
-            records.forEach(r => {
-                if (!colorPorRiesgo[r.riesgo]) return;
+            records.forEach(responseRow => {
+                if (!colorPorRiesgo[responseRow.riesgo]) return;
 
-                const marker = L.circleMarker([r.latitude, r.longitude], {
+                const marker = L.circleMarker([responseRow.latitude, responseRow.longitude], {
                     radius: 6,
                     color: "black",
                     weight: 1,
-                    fillColor: colorPorRiesgo[r.riesgo],
+                    fillColor: colorPorRiesgo[responseRow.riesgo],
                     fillOpacity: 0.7
                 }).addTo(map);
 
                 marker.bindTooltip(
-                    `📍 <b>${r.location2}</b><br>ID: ${r.comid}<br>Riesgo: <span style="color:${colorPorRiesgo[r.riesgo]}">${r.riesgo}</span>`,
-                    { direction: "top", offset: [0, -10] }
+                    `📍 <b>${responseRow.location2}</b><br>ID: ${responseRow.comid}<br>Riesgo: <span style="color:${colorPorRiesgo[responseRow.riesgo]}">${responseRow.riesgo}</span>`,
+                    {direction: "top", offset: [0, -10]}
                 );
             });
 
@@ -105,7 +207,51 @@
         }
     }
 
-    fetchAndRenderMarkers();
+    function buscarHistorico() {
+        const fechaDesde = document.getElementById('fecha-desde').value;
+        const fechaHasta = document.getElementById('fecha-hasta').value;
+
+        if (!fechaDesde || !fechaHasta) {
+            alert('Por favor, selecciona ambas fechas');
+            return;
+        }
+
+        if (fechaDesde > fechaHasta) {
+            alert('La fecha "Desde" no puede ser posterior a la fecha "Hasta"');
+            return;
+        }
+
+        // Aquí puedes agregar la lógica para buscar los datos históricos
+        console.log('Buscando registros desde:', fechaDesde, 'hasta:', fechaHasta);
+
+        // Ejemplo de cómo podrías hacer la llamada a tu API
+        /*
+        fetch(`http://127.0.0.1:8081/geo/historic-events?from=${fechaDesde}&to=${fechaHasta}`)
+            .then(response => response.json())
+            .then(data => {
+                // Actualizar el mapa con los datos históricos
+                // renderHistoricData(data);
+            })
+            .catch(error => {
+                console.error('Error al obtener datos históricos:', error);
+                alert('Error al obtener datos históricos');
+            });
+        */
+    }
+
+    // Establecer fecha máxima como hoy
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('fecha-desde').max = today;
+    document.getElementById('fecha-hasta').max = today;
+
+    // Establecer fecha desde por defecto (1 mes atrás)
+    const oneMonthAgo = new Date();
+    oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1);
+    document.getElementById('fecha-desde').value = oneMonthAgo.toISOString().split('T')[0];
+    document.getElementById('fecha-hasta').value = today;
+
+
+    // fetchAndRenderMarkers();
 </script>
 
 </body>
