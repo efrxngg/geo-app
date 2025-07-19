@@ -34,7 +34,7 @@ console.log({nivelesActivos});
 
 async function fetchExtremeEvents(startDate, endDate) {
     console.log({startDate, endDate});
-    let url = 'http://127.0.0.1:8081/geo/extreme-events?'
+    let url = 'https://geo-git-devops-uees-dev.apps.rm3.7wse.p1.openshiftapps.com/geo/extreme-events?'
     if (startDate) {
         url += '&from=' + startDate;
     }
